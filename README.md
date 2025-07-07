@@ -58,7 +58,7 @@
 
 ---
 
-## 📘 1. Investigación teórica
+## 1. Investigación teórica 📘 
 
 ### 🎯 Objetivo
 
@@ -249,7 +249,7 @@ Algunos de los más conocidos y utilizados son:
 
 ---
 
-## 📚 7. Bibliografía
+##  7. Bibliografía 📚
 
 [1] Y. LeCun, Y. Bengio, and G. Hinton, “Deep learning,” *Nature*, vol. 521, no. 7553, pp. 436–444, 2015.  
 [2] I. Goodfellow, Y. Bengio, and A. Courville, *Deep Learning*, MIT Press, 2016.  
