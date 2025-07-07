@@ -63,9 +63,104 @@
 * **Objetivo**: Explorar fundamentos y arquitecturas de redes neuronales.
 * **Contenido de ejemplo**:
 
-  1. Historia y evolución de las NNs.
-  2. Principales arquitecturas: MLP, CNN, RNN.
-  3. Algoritmos de entrenamiento: backpropagation, optimizadores.
+## 🧠 1. Historia y evolución de las redes neuronales
+
+Las redes neuronales artificiales (ANNs) nacieron como una idea inspirada en la estructura biológica del cerebro humano.  
+El primer modelo matemático fue propuesto por **McCulloch y Pitts** en 1943, quienes demostraron que una red simple de neuronas artificiales podía representar funciones lógicas básicas [3].
+
+En 1958, el psicólogo **Frank Rosenblatt** desarrolló el *perceptrón*, un algoritmo capaz de clasificar entradas linealmente separables.  
+Aunque fue un avance innovador para su tiempo, presentaba limitaciones: no podía resolver problemas como la función XOR.  
+Estas carencias llevaron a una disminución del interés en los años 70.
+
+El renacimiento llegó en los años 80 con la introducción del algoritmo de **retropropagación del error (backpropagation)**, que permitió entrenar redes con múltiples capas ocultas (*MLP*) [5].  
+Este avance técnico marcó un antes y un después, haciendo posible modelar relaciones no lineales de forma más eficiente.
+
+A partir de la década de 2010, el panorama cambió radicalmente:  
+- El crecimiento del *big data*.  
+- La aparición de hardware especializado (como las GPUs).  
+- Y la necesidad de resolver tareas más complejas...
+
+...hicieron que las redes neuronales profundas (*deep learning*) tomaran el protagonismo en aplicaciones del mundo real [1].
+
+> 🚀 Hoy en día, las ANNs son clave en tecnologías como **ChatGPT**, sistemas de reconocimiento facial, vehículos autónomos y diagnósticos médicos asistidos por IA.
+
+---
+
+
+## 🏗️ 2. Principales arquitecturas: MLP, CNN y RNN
+
+Las arquitecturas de redes neuronales definen cómo se organizan las neuronas artificiales y qué tipo de datos pueden procesar eficientemente.
+
+---
+
+### 🔹 MLP (Perceptrón Multicapa)
+
+El MLP es la base de muchas redes modernas. Está compuesto por varias capas de neuronas (una capa de entrada, una o más capas ocultas y una capa de salida), donde cada neurona está conectada a todas las de la capa siguiente [2].  
+Es ideal para tareas de clasificación, regresión y reconocimiento de patrones cuando los datos no tienen estructura espacial ni secuencial.
+
+> 🧠 A pesar de su simplicidad, los MLP pueden aproximar funciones complejas si se entrenan correctamente y con suficientes capas.
+
+---
+
+### 🔹 CNN (Convolutional Neural Networks)
+
+Las CNNs están especialmente diseñadas para trabajar con datos estructurados en forma de matrices, como imágenes.  
+Utilizan capas convolucionales que aplican filtros para detectar características locales (bordes, texturas, colores, formas), lo que reduce el número de parámetros necesarios y mejora el rendimiento [1].
+
+**Aplicaciones destacadas de las CNNs:**
+- 📷 Reconocimiento facial en tiempo real.  
+- 🩺 Clasificación de imágenes médicas (tumores, fracturas, etc.).  
+- 🚗 Sistemas de visión en vehículos autónomos.
+
+---
+
+### 🔹 RNN (Recurrent Neural Networks)
+
+Las RNNs están diseñadas para procesar secuencias de datos.  
+A diferencia de las redes tradicionales, poseen conexiones recurrentes que les permiten “recordar” información previa [2].
+
+**Usos comunes de las RNNs:**
+- 📝 Procesamiento de lenguaje natural.  
+- 🌐 Traducción automática.  
+- 💬 Análisis de sentimientos.  
+- 📈 Predicción de series temporales (finanzas, clima, etc.).
+
+> 🧬 Existen versiones mejoradas como **LSTM** y **GRU**, que solucionan problemas como el desvanecimiento del gradiente y permiten memorizar secuencias más largas.
+
+---
+
+## ⚙️ 3. Algoritmos de entrenamiento: backpropagation y optimizadores
+
+El entrenamiento de una red neuronal consiste en ajustar sus parámetros (pesos y sesgos) para minimizar la diferencia entre la salida esperada y la obtenida.  
+Para lograr esto, se utilizan dos elementos clave:
+
+---
+
+### 🔄 Backpropagation
+
+Es un algoritmo que aplica la **regla de la cadena** del cálculo diferencial para distribuir el error de salida hacia las capas anteriores.  
+Cada peso se actualiza en función del gradiente de la función de pérdida respecto a ese peso, permitiendo que la red aprenda patrones complejos [5].
+
+> 💡 Su impacto fue tal que permitió pasar de redes simples a redes profundas con múltiples capas ocultas.
+
+---
+
+### ⚙️ Optimizadores
+
+El **optimizador** es el encargado de decidir cómo actualizar los pesos de la red durante el proceso de aprendizaje.  
+Algunos de los más conocidos y utilizados son:
+
+- **SGD (Stochastic Gradient Descent):**  
+  Actualiza los pesos usando solo una muestra o mini-lote. Es eficiente pero puede ser sensible al *learning rate*.
+
+- **Adam (Adaptive Moment Estimation):**  
+  Combina ideas de *momentum* y adaptación dinámica. Es robusto, eficiente y muy popular en la práctica [4].
+
+- **RMSprop y Adagrad:**  
+  Ideales para datos dispersos o ruidosos. Ajustan la tasa de aprendizaje de manera adaptativa según la frecuencia de actualización de cada parámetro.
+
+> ✅ Una buena elección del optimizador y de la tasa de aprendizaje (*learning rate*) puede marcar la diferencia entre una red que converge eficientemente y otra que nunca llega a aprender correctamente.
+
 
 ---
 
