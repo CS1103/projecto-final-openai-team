@@ -249,9 +249,13 @@ Algunos de los más conocidos y utilizados son:
 
 ---
 
-### 7. Bibliografía
+## 📚 7. Bibliografía
 
-> *Actualizar con bibliografia utilizada, al menos 4 referencias bibliograficas y usando formato IEEE de referencias bibliograficas.*
+[1] Y. LeCun, Y. Bengio, and G. Hinton, “Deep learning,” *Nature*, vol. 521, no. 7553, pp. 436–444, 2015.  
+[2] I. Goodfellow, Y. Bengio, and A. Courville, *Deep Learning*, MIT Press, 2016.  
+[3] S. Haykin, *Neural Networks and Learning Machines*, 3rd ed., Pearson, 2009.  
+[4] C. M. Bishop, *Pattern Recognition and Machine Learning*, Springer, 2006.  
+[5] D. E. Rumelhart, G. E. Hinton, and R. J. Williams, “Learning representations by back-propagating errors,” *Nature*, vol. 323, pp. 533–536, 1986.
 
 ---
 
