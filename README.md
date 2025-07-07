@@ -58,12 +58,15 @@
 
 ---
 
-### 1. Investigación teórica
+## 📘 1. Investigación teórica
 
-* **Objetivo**: Explorar fundamentos y arquitecturas de redes neuronales.
-* **Contenido de ejemplo**:
+### 🎯 Objetivo
 
-## 🧠 1. Historia y evolución de las redes neuronales
+Explorar fundamentos y arquitecturas de redes neuronales, comprendiendo su evolución, funcionamiento interno y algoritmos de entrenamiento.
+
+---
+
+### 🧠 1.1 Historia y evolución de las redes neuronales
 
 Las redes neuronales artificiales (ANNs) nacieron como una idea inspirada en la estructura biológica del cerebro humano.  
 El primer modelo matemático fue propuesto por **McCulloch y Pitts** en 1943, quienes demostraron que una red simple de neuronas artificiales podía representar funciones lógicas básicas [3].
@@ -75,7 +78,8 @@ Estas carencias llevaron a una disminución del interés en los años 70.
 El renacimiento llegó en los años 80 con la introducción del algoritmo de **retropropagación del error (backpropagation)**, que permitió entrenar redes con múltiples capas ocultas (*MLP*) [5].  
 Este avance técnico marcó un antes y un después, haciendo posible modelar relaciones no lineales de forma más eficiente.
 
-A partir de la década de 2010, el panorama cambió radicalmente:  
+A partir de la década de 2010, el panorama cambió radicalmente:
+
 - El crecimiento del *big data*.  
 - La aparición de hardware especializado (como las GPUs).  
 - Y la necesidad de resolver tareas más complejas...
@@ -86,23 +90,23 @@ A partir de la década de 2010, el panorama cambió radicalmente:
 
 ---
 
-
-## 🏗️ 2. Principales arquitecturas: MLP, CNN y RNN
+### 🏗️ 1.2 Principales arquitecturas: MLP, CNN y RNN
 
 Las arquitecturas de redes neuronales definen cómo se organizan las neuronas artificiales y qué tipo de datos pueden procesar eficientemente.
 
 ---
 
-### 🔹 MLP (Perceptrón Multicapa)
+#### 🔹 MLP (Perceptrón Multicapa)
 
-El MLP es la base de muchas redes modernas. Está compuesto por varias capas de neuronas (una capa de entrada, una o más capas ocultas y una capa de salida), donde cada neurona está conectada a todas las de la capa siguiente [2].  
+El MLP es la base de muchas redes modernas.  
+Está compuesto por varias capas de neuronas (una capa de entrada, una o más capas ocultas y una capa de salida), donde cada neurona está conectada a todas las de la capa siguiente [2].  
 Es ideal para tareas de clasificación, regresión y reconocimiento de patrones cuando los datos no tienen estructura espacial ni secuencial.
 
 > 🧠 A pesar de su simplicidad, los MLP pueden aproximar funciones complejas si se entrenan correctamente y con suficientes capas.
 
 ---
 
-### 🔹 CNN (Convolutional Neural Networks)
+#### 🔹 CNN (Convolutional Neural Networks)
 
 Las CNNs están especialmente diseñadas para trabajar con datos estructurados en forma de matrices, como imágenes.  
 Utilizan capas convolucionales que aplican filtros para detectar características locales (bordes, texturas, colores, formas), lo que reduce el número de parámetros necesarios y mejora el rendimiento [1].
@@ -114,7 +118,7 @@ Utilizan capas convolucionales que aplican filtros para detectar característica
 
 ---
 
-### 🔹 RNN (Recurrent Neural Networks)
+#### 🔹 RNN (Recurrent Neural Networks)
 
 Las RNNs están diseñadas para procesar secuencias de datos.  
 A diferencia de las redes tradicionales, poseen conexiones recurrentes que les permiten “recordar” información previa [2].
@@ -129,14 +133,14 @@ A diferencia de las redes tradicionales, poseen conexiones recurrentes que les p
 
 ---
 
-## ⚙️ 3. Algoritmos de entrenamiento: backpropagation y optimizadores
+### ⚙️ 1.3 Algoritmos de entrenamiento: backpropagation y optimizadores
 
 El entrenamiento de una red neuronal consiste en ajustar sus parámetros (pesos y sesgos) para minimizar la diferencia entre la salida esperada y la obtenida.  
 Para lograr esto, se utilizan dos elementos clave:
 
 ---
 
-### 🔄 Backpropagation
+#### 🔄 Backpropagation
 
 Es un algoritmo que aplica la **regla de la cadena** del cálculo diferencial para distribuir el error de salida hacia las capas anteriores.  
 Cada peso se actualiza en función del gradiente de la función de pérdida respecto a ese peso, permitiendo que la red aprenda patrones complejos [5].
@@ -145,7 +149,7 @@ Cada peso se actualiza en función del gradiente de la función de pérdida resp
 
 ---
 
-### ⚙️ Optimizadores
+#### ⚙️ Optimizadores
 
 El **optimizador** es el encargado de decidir cómo actualizar los pesos de la red durante el proceso de aprendizaje.  
 Algunos de los más conocidos y utilizados son:
@@ -160,7 +164,6 @@ Algunos de los más conocidos y utilizados son:
   Ideales para datos dispersos o ruidosos. Ajustan la tasa de aprendizaje de manera adaptativa según la frecuencia de actualización de cada parámetro.
 
 > ✅ Una buena elección del optimizador y de la tasa de aprendizaje (*learning rate*) puede marcar la diferencia entre una red que converge eficientemente y otra que nunca llega a aprender correctamente.
-
 
 ---
 
