@@ -2,11 +2,11 @@
 # Proyecto Final 2025-1: AI Neural Network
 ## **CS2013 Programación III** · Informe Final
 
-### **Descripción**
+## **Descripción**
 
 > Ejemplo: Implementación de una red neuronal multicapa en C++ para clasificación de dígitos manuscritos.
 
-### Contenidos
+## Contenidos
 
 1. [Datos generales](#datos-generales)
 2. [Requisitos e instalación](#requisitos-e-instalación)
@@ -20,7 +20,7 @@
 10. [Licencia](#licencia)
 ---
 
-### Datos generales
+## Datos generales
 
 * **Tema**: Redes Neuronales en AI
 * **Grupo**: `group_3_custom_name`
@@ -36,7 +36,7 @@
 
 ---
 
-### Requisitos e instalación
+## Requisitos e instalación
 
 1. **Compilador**: GCC 11 o superior
 2. **Dependencias**:
@@ -167,9 +167,9 @@ Algunos de los más conocidos y utilizados son:
 
 ---
 
-### 2. Diseño e implementación
+## 2. Diseño e implementación
 
-#### 2.1 Arquitectura de la solución
+### 2.1 Arquitectura de la solución
 
 * **Patrones de diseño**: ejemplo: Factory para capas, Strategy para optimizadores.
 * **Estructura de carpetas (ejemplo)**:
@@ -184,7 +184,7 @@ Algunos de los más conocidos y utilizados son:
   └── docs/
   ```
 
-#### 2.2 Manual de uso y casos de prueba
+### 2.2 Manual de uso y casos de prueba
 
 * **Cómo ejecutar**: `./build/neural_net_demo input.csv output.csv`
 * **Casos de prueba**:
@@ -197,7 +197,7 @@ Algunos de los más conocidos y utilizados son:
 
 ---
 
-### 3. Ejecución
+## 3. Ejecución
 
 > **Demo de ejemplo**: Video/demo alojado en `docs/demo.mp4`.
 > Pasos:
@@ -208,7 +208,7 @@ Algunos de los más conocidos y utilizados son:
 
 ---
 
-### 4. Análisis del rendimiento
+## 4. Análisis del rendimiento
 
 * **Métricas de ejemplo**:
 
@@ -226,7 +226,7 @@ Algunos de los más conocidos y utilizados son:
 
 ---
 
-### 5. Trabajo en equipo
+## 5. Trabajo en equipo
 
 | Tarea                     | Miembro  | Rol                       |
 | ------------------------- | -------- | ------------------------- |
@@ -240,7 +240,7 @@ Algunos de los más conocidos y utilizados son:
 
 ---
 
-### 6. Conclusiones
+## 6. Conclusiones
 
 * **Logros**: Implementar NN desde cero, validar en dataset de ejemplo.
 * **Evaluación**: Calidad y rendimiento adecuados para propósito académico.
