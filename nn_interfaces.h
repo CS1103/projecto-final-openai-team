@@ -7,6 +7,7 @@
 
 #include "tensor.h"
 #include <functional>
+#include <memory>
 
 namespace utec::nn {
 
