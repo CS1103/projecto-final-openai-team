@@ -26,10 +26,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c062c53-6f4f-464f-aa4d-7555e396a586" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nn_interfaces.h" beforeDir="false" afterPath="$PROJECT_DIR$/nn_interfaces.h" afterDir="false" />
-    </list>
+    <list default="true" id="6c062c53-6f4f-464f-aa4d-7555e396a586" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +79,7 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "avance",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "/home/luism/projecto-final-openai-team",
     "node.js.detected.package.eslint": "true",
@@ -166,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1751865795140</updated>
       <workItem from="1751865796343" duration="2143000" />
-      <workItem from="1752096587176" duration="490000" />
+      <workItem from="1752096587176" duration="823000" />
     </task>
     <servers />
   </component>

@@ -47,11 +47,10 @@
 3. **Instalación**:
 
    ```bash
-   git clone https://github.com/EJEMPLO/proyecto-final.git
-   cd proyecto-final
-   mkdir build && cd build
-   cmake ..
-   make
+   git clone https://github.com/CS1103/projecto-final-openai-team.git
+   cd proyecto-final-openai-team
+   g++ -o programa main.cpp
+   ./programa
    ```
 
 > *Ejemplo de repositorio y comandos, ajustar según proyecto.*
