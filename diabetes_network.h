@@ -80,11 +80,23 @@ DiabetesNetworkConfig get_complex_config() {
 DiabetesNetworkConfig get_optimized_config() {
     return {
         .layer_sizes = {13, 64, 32, 16, 1},
-        .learning_rate = 0.001f,
+        .learning_rate = 0.0001f,  // Reducido de 0.001 a 0.0001 para evitar NaN
         .epochs = 2000,
         .batch_size = 128,
         .use_adam = true,
         .name = "Optimized Diabetes Classifier"
+    };
+}
+
+// Ultra-stable configuration to avoid NaN problems
+DiabetesNetworkConfig get_stable_config() {
+    return {
+        .layer_sizes = {13, 32, 16, 1},  // Arquitectura más simple y estable
+        .learning_rate = 0.0005f,  // Learning rate conservador
+        .epochs = 1500,
+        .batch_size = 64,
+        .use_adam = false,  // Usar SGD que es más estable
+        .name = "Ultra-Stable Diabetes Classifier"
     };
 }
 
@@ -160,6 +172,11 @@ std::unique_ptr<NeuralNetwork<T>> create_complex_diabetes_classifier() {
 template<typename T = float>
 std::unique_ptr<NeuralNetwork<T>> create_optimized_diabetes_classifier() {
     return create_diabetes_classifier<T>(get_optimized_config());
+}
+
+template<typename T = float>
+std::unique_ptr<NeuralNetwork<T>> create_stable_diabetes_classifier() {
+    return create_diabetes_classifier<T>(get_stable_config());
 }
 
 template<typename T = float>

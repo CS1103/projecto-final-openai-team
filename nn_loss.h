@@ -55,7 +55,7 @@ public:
 template<typename T>
 class BinaryCrossEntropyLoss : public ILoss<T> {
 private:
-    T epsilon_ = T(1e-15); // Small constant to avoid log(0)
+    T epsilon_ = T(1e-7); // Aumentado de 1e-15 a 1e-7 para mayor estabilidad
 
 public:
     T compute_loss(const Tensor<T, 2>& predictions, const Tensor<T, 2>& targets) override {

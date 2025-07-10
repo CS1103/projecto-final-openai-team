@@ -48,6 +48,10 @@ set(TRAIN_1000_SOURCE
     train_1000_epochs.cpp
 )
 
+set(TRAIN_STABLE_SOURCE
+    train_stable.cpp
+)
+
 # Verificar que todos los archivos existen
 foreach(header ${HEADER_FILES})
     if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${header}")
@@ -70,10 +74,14 @@ add_executable(train_500 ${TRAIN_500_SOURCE} ${HEADER_FILES})
 # Crear ejecutable para entrenamiento de 1000 épocas
 add_executable(train_1000 ${TRAIN_1000_SOURCE} ${HEADER_FILES})
 
+# Crear ejecutable para entrenamiento estable (anti-NaN)
+add_executable(train_stable ${TRAIN_STABLE_SOURCE} ${HEADER_FILES})
+
 # Configurar directorio de inclusión para todos los ejecutables
 target_include_directories(diabetes_predictor PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(train_500 PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(train_1000 PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(train_stable PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Propiedades de los targets
 set_target_properties(diabetes_predictor PROPERTIES
@@ -94,6 +102,12 @@ set_target_properties(train_1000 PROPERTIES
     OUTPUT_NAME "train_1000_epochs"
 )
 
+set_target_properties(train_stable PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+    OUTPUT_NAME "train_stable"
+)
+
 # Verificar que el dataset existe
 if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/diabetes_prediction_dataset.csv")
     message(WARNING "Dataset file not found: diabetes_prediction_dataset.csv")
@@ -112,6 +126,9 @@ if(WIN32)
         
         target_compile_definitions(train_1000 PRIVATE _CRT_SECURE_NO_WARNINGS)
         target_compile_options(train_1000 PRIVATE /utf-8)
+        
+        target_compile_definitions(train_stable PRIVATE _CRT_SECURE_NO_WARNINGS)
+        target_compile_options(train_stable PRIVATE /utf-8)
     endif()
 endif()
 
@@ -135,7 +152,8 @@ add_custom_target(info
     COMMAND ${CMAKE_COMMAND} -E echo "     * diabetes_predictor (programa completo)"
     COMMAND ${CMAKE_COMMAND} -E echo "     * train_500_epochs (entrenamiento rápido - 500 épocas)"
     COMMAND ${CMAKE_COMMAND} -E echo "     * train_1000_epochs (entrenamiento medio - 1000 épocas)"
-    COMMAND ${CMAKE_COMMAND} -E echo "   - Targets disponibles: run, run_500, run_1000, rebuild"
+    COMMAND ${CMAKE_COMMAND} -E echo "     * train_stable (entrenamiento estable - sin NaN)"
+    COMMAND ${CMAKE_COMMAND} -E echo "   - Targets disponibles: run, run_500, run_1000, run_stable, rebuild"
     VERBATIM
 )
 
@@ -166,6 +184,15 @@ add_custom_target(run_1000
     VERBATIM
 )
 
+# Target para ejecutar entrenamiento estable (anti-NaN)
+add_custom_target(run_stable
+    COMMAND train_stable
+    DEPENDS train_stable
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    COMMENT "🛡️ Ejecutando entrenamiento estable (sin NaN)..."
+    VERBATIM
+)
+
 # Target para limpiar y rebuilder
 add_custom_target(rebuild
     COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target clean
@@ -189,7 +216,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 endif()
 
 # Instalar (opcional)
-install(TARGETS diabetes_predictor train_500 train_1000
+install(TARGETS diabetes_predictor train_500 train_1000 train_stable
     RUNTIME DESTINATION bin
     COMPONENT applications
 ) 
