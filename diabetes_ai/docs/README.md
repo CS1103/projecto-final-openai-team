@@ -26,11 +26,9 @@ Implementación de una red neuronal multicapa en C++ para la predicción de diab
 * **Grupo**: `group_3_custom_name`
 * **Integrantes**:
 
-  * Alumno A – 209900001 (Responsable de investigación teórica)
-  * Alumno B – 209900002 (Desarrollo de la arquitectura)
-  * Alumno C – 209900003 (Implementación del modelo)
-  * Alumno D – 209900004 (Pruebas y benchmarking)
-  * Alumno E – 209900005 (Documentación y demo)
+  * Francis Huerta Roque – 202310535 (Responsable de investigación teórica, desarrollo de la arquitectura)
+  * Nicolas Fabian Riquero Urteaga – 202410759 (Implementación del modelo)
+  * Maquera Quispe, Luis Fernando – 202410621 (Pruebas, benchmarking, documentación y demo)
 
 > *Nota: Reemplazar nombres y roles reales.*
 
