@@ -23,7 +23,7 @@ Implementación de una red neuronal multicapa en C++ para la predicción de diab
 ## Datos generales
 
 * **Tema**: Redes Neuronales para Predicción de Diabetes
-* **Grupo**: `group_3_custom_name`
+* **Grupo**: `open-ai-team`
 * **Integrantes**:
 
   * Francis Huerta Roque – 202310535 (Responsable de investigación teórica, desarrollo de la arquitectura)
