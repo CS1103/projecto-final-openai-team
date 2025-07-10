@@ -6,6 +6,10 @@
 
 Implementación de una red neuronal multicapa en C++ para la predicción de diabetes mellitus, utilizando un dataset médico real balanceado. El proyecto demuestra la aplicación práctica de redes neuronales artificiales en el diagnóstico médico asistido.
 
+## **Video**
+
+Link: https://www.youtube.com/watch?v=mR9xgN0fn60
+
 ## Contenidos
 
 1. [Datos generales](#datos-generales)
