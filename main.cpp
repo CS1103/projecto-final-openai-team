@@ -226,8 +226,8 @@ int main() {
         // Phase 1: Load and preprocess data
         print_phase("CARGA Y PREPROCESAMIENTO DE DATOS", 1);
         
-        std::cout << "📁 Cargando dataset de diabetes..." << std::endl;
-        DiabetesDataLoader loader("diabetes_prediction_dataset.csv");
+        std::cout << "📁 Cargando dataset de diabetes balanceado..." << std::endl;
+        DiabetesDataLoader loader("diabetes_prediction_dataset_balanced_8500.csv");
         
         loader.print_dataset_summary();
         loader.print_feature_info();
@@ -261,7 +261,7 @@ int main() {
         
     } catch (const std::exception& e) {
         std::cerr << "\n❌ ERROR: " << e.what() << std::endl;
-        std::cerr << "🔧 Verifique que el archivo 'diabetes_prediction_dataset.csv' esté en el directorio actual." << std::endl;
+        std::cerr << "🔧 Verifique que el archivo 'diabetes_prediction_dataset_balanced_8500.csv' esté en el directorio actual." << std::endl;
         return 1;
     }
     
