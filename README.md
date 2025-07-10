@@ -26,11 +26,11 @@
 * **Grupo**: `group_3_custom_name`
 * **Integrantes**:
 
-  * Alumno A – 209900001 (Responsable de investigación teórica)
-  * Alumno B – 209900002 (Desarrollo de la arquitectura)
-  * Alumno C – 209900003 (Implementación del modelo)
-  * Alumno D – 209900004 (Pruebas y benchmarking)
-  * Alumno E – 209900005 (Documentación y demo)
+  * Nicolas Fabian Riquero Urteaga – 202410759 
+  * Alumno B – 209900002 
+  * Alumno C – 209900003 
+  * Alumno D – 209900004 
+  
 
 > *Nota: Reemplazar nombres y roles reales.*
 
