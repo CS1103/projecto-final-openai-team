@@ -3,6 +3,12 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="095029a1-495c-4f06-a2cb-0d4e6cf2ca93" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,6 +135,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Downsampling" />
+      <item itemvalue="Python.Downsampling (1)" />
+      <item itemvalue="Python.datos" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Downsampling (1)" />

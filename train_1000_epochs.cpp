@@ -182,7 +182,7 @@ int main() {
         std::cout << "\n🏗️ CONFIGURACIÓN DE RED (1000 ÉPOCAS):" << std::endl;
         config.print_config();
         
-        auto network = create_medium_1000_diabetes_classifier<float>();
+        auto network = create_diabetes_classifier<float>(config);
         
         // Phase 3: Training
         train_network(network, data, config);
