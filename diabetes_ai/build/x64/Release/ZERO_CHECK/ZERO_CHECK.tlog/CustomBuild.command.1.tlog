@@ -1,0 +1,10 @@
+^C:\USERS\LUISF\PROJECTO-FINAL-OPENAI-TEAM\DIABETES_AI\BUILD\CMAKEFILES\FB6EB44EE7F60E6B572900EFA53ADA7C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/luisf/projecto-final-openai-team/diabetes_ai -BC:/Users/luisf/projecto-final-openai-team/diabetes_ai/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/luisf/projecto-final-openai-team/diabetes_ai/build/diabetes_prediction_nn.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

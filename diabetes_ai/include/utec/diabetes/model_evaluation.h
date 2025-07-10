@@ -5,7 +5,7 @@
 #ifndef PROG3_NN_FINAL_PROJECT_V2025_01_MODEL_EVALUATION_H
 #define PROG3_NN_FINAL_PROJECT_V2025_01_MODEL_EVALUATION_H
 
-#include "tensor.h"
+#include "../algebra/tensor.h"
 #include <iostream>
 #include <iomanip>
 #include <cmath>

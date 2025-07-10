@@ -2,11 +2,11 @@
 // Main program for diabetes prediction using neural networks
 //
 
-#include "data_loader.h"
-#include "diabetes_network.h"
-#include "model_evaluation.h"
-#include "nn_loss.h"
-#include "nn_optimizer.h"
+#include "utec/diabetes/data_loader.h"
+#include "utec/diabetes/diabetes_network.h"
+#include "utec/diabetes/model_evaluation.h"
+#include "utec/nn/nn_loss.h"
+#include "utec/nn/nn_optimizer.h"
 #include <iostream>
 #include <chrono>
 #include <iomanip>
@@ -227,7 +227,7 @@ int main() {
         print_phase("CARGA Y PREPROCESAMIENTO DE DATOS", 1);
         
         std::cout << "📁 Cargando dataset de diabetes balanceado..." << std::endl;
-        DiabetesDataLoader loader("diabetes_prediction_dataset_balanced_8500.csv");
+        DiabetesDataLoader loader("data/diabetes_prediction_dataset_balanced_8500.csv");
         
         loader.print_dataset_summary();
         loader.print_feature_info();
@@ -261,7 +261,7 @@ int main() {
         
     } catch (const std::exception& e) {
         std::cerr << "\n❌ ERROR: " << e.what() << std::endl;
-        std::cerr << "🔧 Verifique que el archivo 'diabetes_prediction_dataset_balanced_8500.csv' esté en el directorio actual." << std::endl;
+        std::cerr << "🔧 Verifique que el archivo 'data/diabetes_prediction_dataset_balanced_8500.csv' esté en el directorio del proyecto." << std::endl;
         return 1;
     }
     

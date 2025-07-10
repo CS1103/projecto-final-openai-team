@@ -5,7 +5,7 @@
 #ifndef PROG3_NN_FINAL_PROJECT_V2025_01_DATA_LOADER_H
 #define PROG3_NN_FINAL_PROJECT_V2025_01_DATA_LOADER_H
 
-#include "tensor.h"
+#include "../algebra/tensor.h"
 #include <fstream>
 #include <sstream>
 #include <string>

@@ -5,7 +5,7 @@
 #ifndef PROG3_NN_FINAL_PROJECT_V2025_01_DIABETES_NETWORK_H
 #define PROG3_NN_FINAL_PROJECT_V2025_01_DIABETES_NETWORK_H
 
-#include "neural_network.h"
+#include "../nn/neural_network.h"
 #include <memory>
 #include <vector>
 #include <iostream>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\luisf\projecto-final-openai-team\diabetes_ai\build\CMakeFiles\fb6eb44ee7f60e6b572900efa53ada7c\run_stable.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\luisf\projecto-final-openai-team\diabetes_ai\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\luisf\projecto-final-openai-team\diabetes_ai\build\CMakeFiles\run_stable" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2CAE30CD-7613-37AC-9457-53A5292543F5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
