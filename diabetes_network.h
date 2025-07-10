@@ -88,6 +88,30 @@ DiabetesNetworkConfig get_optimized_config() {
     };
 }
 
+// Fast training configuration - 500 epochs
+DiabetesNetworkConfig get_fast_500_config() {
+    return {
+        .layer_sizes = {13, 32, 1},
+        .learning_rate = 0.01f,
+        .epochs = 500,
+        .batch_size = 64,
+        .use_adam = false,
+        .name = "Fast 500 Epochs Classifier"
+    };
+}
+
+// Medium training configuration - 1000 epochs
+DiabetesNetworkConfig get_medium_1000_config() {
+    return {
+        .layer_sizes = {13, 32, 1},
+        .learning_rate = 0.01f,
+        .epochs = 1000,
+        .batch_size = 64,
+        .use_adam = false,
+        .name = "Medium 1000 Epochs Classifier"
+    };
+}
+
 // Factory functions to create diabetes classifiers
 
 template<typename T>
@@ -136,6 +160,16 @@ std::unique_ptr<NeuralNetwork<T>> create_complex_diabetes_classifier() {
 template<typename T = float>
 std::unique_ptr<NeuralNetwork<T>> create_optimized_diabetes_classifier() {
     return create_diabetes_classifier<T>(get_optimized_config());
+}
+
+template<typename T = float>
+std::unique_ptr<NeuralNetwork<T>> create_fast_500_diabetes_classifier() {
+    return create_diabetes_classifier<T>(get_fast_500_config());
+}
+
+template<typename T = float>
+std::unique_ptr<NeuralNetwork<T>> create_medium_1000_diabetes_classifier() {
+    return create_diabetes_classifier<T>(get_medium_1000_config());
 }
 
 // Default factory - returns the optimized configuration

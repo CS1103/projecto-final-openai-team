@@ -39,6 +39,15 @@ set(SOURCE_FILES
     main.cpp
 )
 
+# Archivos fuente para entrenamientos específicos
+set(TRAIN_500_SOURCE
+    train_500_epochs.cpp
+)
+
+set(TRAIN_1000_SOURCE
+    train_1000_epochs.cpp
+)
+
 # Verificar que todos los archivos existen
 foreach(header ${HEADER_FILES})
     if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${header}")
@@ -55,14 +64,34 @@ endforeach()
 # Crear el ejecutable principal
 add_executable(diabetes_predictor ${SOURCE_FILES} ${HEADER_FILES})
 
-# Configurar directorio de inclusión
-target_include_directories(diabetes_predictor PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+# Crear ejecutable para entrenamiento de 500 épocas
+add_executable(train_500 ${TRAIN_500_SOURCE} ${HEADER_FILES})
 
-# Propiedades del target
+# Crear ejecutable para entrenamiento de 1000 épocas
+add_executable(train_1000 ${TRAIN_1000_SOURCE} ${HEADER_FILES})
+
+# Configurar directorio de inclusión para todos los ejecutables
+target_include_directories(diabetes_predictor PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(train_500 PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(train_1000 PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+# Propiedades de los targets
 set_target_properties(diabetes_predictor PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
     OUTPUT_NAME "diabetes_predictor"
+)
+
+set_target_properties(train_500 PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+    OUTPUT_NAME "train_500_epochs"
+)
+
+set_target_properties(train_1000 PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+    OUTPUT_NAME "train_1000_epochs"
 )
 
 # Verificar que el dataset existe
@@ -77,6 +106,12 @@ if(WIN32)
     if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
         target_compile_definitions(diabetes_predictor PRIVATE _CRT_SECURE_NO_WARNINGS)
         target_compile_options(diabetes_predictor PRIVATE /utf-8)
+        
+        target_compile_definitions(train_500 PRIVATE _CRT_SECURE_NO_WARNINGS)
+        target_compile_options(train_500 PRIVATE /utf-8)
+        
+        target_compile_definitions(train_1000 PRIVATE _CRT_SECURE_NO_WARNINGS)
+        target_compile_options(train_1000 PRIVATE /utf-8)
     endif()
 endif()
 
@@ -96,17 +131,38 @@ add_custom_target(info
     COMMAND ${CMAKE_COMMAND} -E echo "   - Compilador: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}"
     COMMAND ${CMAKE_COMMAND} -E echo "   - C++ Standard: ${CMAKE_CXX_STANDARD}"
     COMMAND ${CMAKE_COMMAND} -E echo "   - Build Type: ${CMAKE_BUILD_TYPE}"
-    COMMAND ${CMAKE_COMMAND} -E echo "   - Ejecutable: diabetes_predictor"
-    COMMAND ${CMAKE_COMMAND} -E echo "   - Archivos fuente: ${SOURCE_FILES}"
+    COMMAND ${CMAKE_COMMAND} -E echo "   - Ejecutables disponibles:"
+    COMMAND ${CMAKE_COMMAND} -E echo "     * diabetes_predictor (programa completo)"
+    COMMAND ${CMAKE_COMMAND} -E echo "     * train_500_epochs (entrenamiento rápido - 500 épocas)"
+    COMMAND ${CMAKE_COMMAND} -E echo "     * train_1000_epochs (entrenamiento medio - 1000 épocas)"
+    COMMAND ${CMAKE_COMMAND} -E echo "   - Targets disponibles: run, run_500, run_1000, rebuild"
     VERBATIM
 )
 
-# Target para ejecutar el programa
+# Target para ejecutar el programa principal
 add_custom_target(run
     COMMAND diabetes_predictor
     DEPENDS diabetes_predictor
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     COMMENT "🚀 Ejecutando diabetes_predictor..."
+    VERBATIM
+)
+
+# Target para ejecutar entrenamiento de 500 épocas
+add_custom_target(run_500
+    COMMAND train_500_epochs
+    DEPENDS train_500
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    COMMENT "⚡ Ejecutando entrenamiento rápido (500 épocas)..."
+    VERBATIM
+)
+
+# Target para ejecutar entrenamiento de 1000 épocas
+add_custom_target(run_1000
+    COMMAND train_1000_epochs
+    DEPENDS train_1000
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    COMMENT "🔥 Ejecutando entrenamiento medio (1000 épocas)..."
     VERBATIM
 )
 
@@ -133,7 +189,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 endif()
 
 # Instalar (opcional)
-install(TARGETS diabetes_predictor
+install(TARGETS diabetes_predictor train_500 train_1000
     RUNTIME DESTINATION bin
     COMPONENT applications
 ) 
