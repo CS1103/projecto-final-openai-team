@@ -33,6 +33,7 @@ Link: https://www.youtube.com/watch?v=mR9xgN0fn60
   * Francis Huerta Roque – 202310535 (Responsable de investigación teórica, desarrollo de la arquitectura)
   * Nicolas Fabian Riquero Urteaga – 202410759 (Implementación del modelo)
   * Maquera Quispe, Luis Fernando – 202410621 (Pruebas, benchmarking, documentación y demo)
+  * Jossy Abigail Gamonal Retuerto - 202310643 (Implementación del modelo)
 
 > *Nota: Reemplazar nombres y roles reales.*
 
